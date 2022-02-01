@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+* {
+	box-sizing: border-box;
+	font-family: 'Outfit', sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: cyan;
+}
+
+/* Utility classes */
+
+/* .grid-col-span-2 {
+	grid-column: span 2;
+} */
+
+/* Main grid */
+.grid-container {
+	display: grid;
+	gap: 1.5rem;
+	grid-template-areas:
+		'one'
+		'two'
+		'three'
+		'four'
+		'five';
+
+	padding-block: 2rem;
+	width: min(95%, 70rem);
+	margin-inline: auto;
+}
+
+/* Grid items */
+.grid-item {
+	background: #ddd;
+	border: 1px solid white;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.grid-item:nth-child(1) {
+	grid-area: one;
+}
+.grid-item:nth-child(2) {
+	grid-area: two;
+}
+.grid-item:nth-child(3) {
+	grid-area: three;
+}
+.grid-item:nth-child(4) {
+	grid-area: four;
+}
+.grid-item:nth-child(5) {
+	grid-area: five;
+}
+
+@media (min-width: 40em) {
+	.grid-container {
+		grid-template-areas:
+			'one one'
+			'two five'
+			'three five'
+			'four four';
+	}
+}
+
+@media (min-width: 60em) {
+	.grid-container {
+		grid-template-areas:
+			'one one two five'
+			'three four four five';
+	}
+}
